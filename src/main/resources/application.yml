@@ -9,6 +9,6 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.felton.mybatismapper.entity
-mapper:
-  mappers: com.felton.mybatismapper.baseDao.IBaseDao
-  identity: MYSQL
+#mapper:
+#  mappers: com.felton.mybatismapper.baseDao.IBaseDao
+#  identity: MYSQL

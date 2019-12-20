@@ -1,8 +1,8 @@
 package com.felton.mybatismapper.config;
 
+import com.felton.mybatismapper.baseDao.IBaseDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import tk.mybatis.mapper.common.BaseMapper;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import java.util.Properties;
@@ -28,7 +28,7 @@ public class MybatisMapperScannerConfig {
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         mapperScannerConfigurer.setBasePackage("com.felton.mybatismapper.dao");
         Properties properties = new Properties();
-        properties.setProperty("mappers", BaseMapper.class.getName());
+        properties.setProperty("mappers", IBaseDao.class.getName());
         properties.setProperty("notEmpty", "false");
         properties.setProperty("IDENTITY", "MYSQL");
 
