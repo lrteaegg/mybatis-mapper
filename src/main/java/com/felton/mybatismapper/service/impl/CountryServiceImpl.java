@@ -21,6 +21,7 @@ public class CountryServiceImpl implements ICountryService {
 
     @Override
     public int delectByPrimaryKey(Integer id) {
-        return 0;
+        int row = countryDao.deleteByPrimaryKey(id);
+        return row;
     }
 }

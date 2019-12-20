@@ -9,13 +9,13 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Repository
-@Table(name = "contry")
+@Table(name = "country")
 @Data
 public class Country implements Serializable {
     @Id
     private Integer id;
-    private String  countryname;
-    private String  countrycode;
+    private String  countryName;
+    private String  countryCode;
 
     //省略 getter 和 setter
 }

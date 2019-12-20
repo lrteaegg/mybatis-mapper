@@ -1,4 +1,4 @@
-package com.felton.mybatismapper.dao;
+package com.felton.mybatismapper.baseDao;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

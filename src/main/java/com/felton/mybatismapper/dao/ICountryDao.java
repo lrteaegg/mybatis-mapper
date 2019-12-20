@@ -1,5 +1,6 @@
 package com.felton.mybatismapper.dao;
 
+import com.felton.mybatismapper.baseDao.IBaseDao;
 import com.felton.mybatismapper.entity.Country;
 
 /**
