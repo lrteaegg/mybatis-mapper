@@ -64,11 +64,17 @@
         </dependency>
 
         <!--pagehelper-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.pagehelper</groupId>-->
+            <!--<artifactId>pagehelper</artifactId>-->
+            <!--<version>4.2.1</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>4.2.1</version>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.7</version>
         </dependency>
+
         <!-- druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
