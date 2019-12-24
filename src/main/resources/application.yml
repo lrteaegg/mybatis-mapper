@@ -12,3 +12,6 @@ mybatis:
 #mapper:
 #  mappers: com.felton.mybatismapper.baseDao.IBaseDao
 #  identity: MYSQL
+
+global:
+  log-dir: log/
