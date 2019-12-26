@@ -1,5 +1,9 @@
 package com.felton.mybatismapper.service;
 
+import com.felton.mybatismapper.domain.entity.Country;
+
+import java.util.List;
+
 /**
  * ICountryService
  *
@@ -9,4 +13,6 @@ package com.felton.mybatismapper.service;
  */
 public interface ICountryService {
     int delectByPrimaryKey(Integer id);
+
+    List<Country> listCountry();
 }
