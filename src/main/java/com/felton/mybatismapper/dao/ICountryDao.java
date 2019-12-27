@@ -10,5 +10,6 @@ import com.felton.mybatismapper.entity.Country;
  * @Description: 接口继承
  * @date 2019/12/20
  */
+
 public interface ICountryDao extends IBaseDao<Country> {
 }

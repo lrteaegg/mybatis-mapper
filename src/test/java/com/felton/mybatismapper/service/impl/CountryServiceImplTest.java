@@ -30,4 +30,9 @@ class CountryServiceImplTest {
         log.info("info test");
         log.warn("warn test");
     }
+
+    @Test
+    void addLocalCountry() {
+        countryService.addLocalCountry();
+    }
 }

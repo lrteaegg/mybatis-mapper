@@ -6,6 +6,7 @@ import com.felton.mybatismapper.util.MathCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -32,5 +33,14 @@ public class CountryController {
     public int computer(Integer integer) {
         MathCalculator mathCalculator = new MathCalculator();
         return mathCalculator.div(1, 1);
+    }
+
+    /**
+     * 批量添加图片
+     * @return
+     */
+    @RequestMapping(value = "/batch-add", method = RequestMethod.GET)
+    public int batchAddCountry() {
+        return countryService.addLocalCountry();
     }
 }
