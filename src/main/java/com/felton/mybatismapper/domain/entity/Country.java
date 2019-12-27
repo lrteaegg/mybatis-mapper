@@ -1,9 +1,8 @@
-package com.felton.mybatismapper.entity;
+package com.felton.mybatismapper.domain.entity;
 
 
 import lombok.Data;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
