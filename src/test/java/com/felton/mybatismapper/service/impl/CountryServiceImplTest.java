@@ -1,5 +1,6 @@
 package com.felton.mybatismapper.service.impl;
 
+import com.felton.mybatismapper.dao.ICountryDao;
 import com.felton.mybatismapper.domain.entity.Country;
 import com.felton.mybatismapper.service.ICountryService;
 import com.github.pagehelper.PageHelper;
@@ -22,6 +23,8 @@ class CountryServiceImplTest {
 
     @Autowired
     private ICountryService countryService;
+    @Autowired
+    private ICountryDao countryDao;
 
     @Test
     void delectByPrimaryKey() {
@@ -39,5 +42,15 @@ class CountryServiceImplTest {
     @Test
     void addLocalCountry() {
         countryService.addLocalCountry();
+    }
+
+    @Test
+    void pageHelperTest() {
+        PageHelper.startPage(0 , 5);
+        List<Country> result = countryDao.selectAll();
+        System.out.println(result.size());
+        for (Country country : result) {
+            System.out.println(country.getCountryName());
+        }
     }
 }

@@ -1,6 +1,6 @@
 package com.felton.mybatismapper.service;
 
-import com.felton.mybatismapper.entity.Country;
+import com.felton.mybatismapper.domain.entity.Country;
 
 /**
  * ICountryService
@@ -11,7 +11,7 @@ import com.felton.mybatismapper.entity.Country;
  */
 public interface ICountryService {
     int delectByPrimaryKey(Integer id);
-    int addCountry(Country  country);
+    int addCountry(Country country);
 
     /**
      * 批量添加本地文件到数据库

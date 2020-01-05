@@ -1,10 +1,38 @@
-spring:
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
-    username: root
-    password: root
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+#    username: root
+#    password: root
+
+#shardingjdbc配置
+sharding:
+  jdbc:
+    data-sources:
+      ## 配置从数据库
+      ds_slave_0:
+        type: com.alibaba.druid.pool.DruidDataSource
+        password: root
+        username: root
+        jdbc-url: jdbc:mysql://localhost:3306/test1?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      ## 配置主数据库
+      ds_master:
+        type: com.alibaba.druid.pool.DruidDataSource
+        password: root
+        username: root
+        jdbc-url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    ##　配置读写分离
+    master-slave-rule:
+      ##  配置从库选择策略，提供轮询与随机
+      load-balance-algorithm-type: round_robin
+      slave-data-source-names: ds_slave_0
+      name: ds_ms
+      master-data-source-name: ds_master
+
+
 pagehelper:
 #  数据库类型
   helper-dialect: mysql
